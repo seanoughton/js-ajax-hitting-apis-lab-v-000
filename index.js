@@ -34,7 +34,7 @@ function getBranches(el) {
 }
 
 
-//fills the details div with a list of names of each branch of the repository. Give the link data attributes of username and repository for use by the getBranches function.
+
 function displayBranches() {
   //turns this into a json object
   const branches = JSON.parse(this.responseText)
