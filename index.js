@@ -1,13 +1,13 @@
 function getRepositories() {
   let user = document.getElementById("username").value;
   const req = new XMLHttpRequest()
-  req.addEventListener("load", showRepositories);
+  req.addEventListener("load", displayRepositories);
   //need to put user into the open url
   req.open("GET", `https://api.github.com/users/${user}/repos`)
   req.send()
 }
 
-function showRepositories(event, data) {
+function displayRepositories(event, data) {
   //The displayed repositories should include the name and a link to the URL (HTML URL, not API URL).
   //need three things username, repository name, repository url
   var repos = JSON.parse(this.responseText)
